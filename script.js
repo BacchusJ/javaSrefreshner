@@ -186,3 +186,38 @@ if (age < 13) {
             console.log(firstName + ' is a man.')
         
    }
+
+ /*  truthy and falsy values and equality operators
+falsey values: are undefined, null, o, '', nan all these will be converted to false when evaluated
+
+truthy values: not falsy values */
+
+var height;
+height = 0;
+
+if (height || height === 0) {
+    console.log('Variable is defined');
+} else {
+    console.log('variable has NOT been defined');
+}
+   
+
+var johnScore = (89 + 120 + 103) / 3;
+console.log(johnScore)
+
+var mikeScore = (119 + 94 + 123) / 3;
+console.log(mikeScore);
+
+var maryScore = (97 + 134 + 105) / 3;
+console.log(maryScore);
+
+if (johnScore > mikeScore && johnScore > maryScore) {
+    console.log('John is the winner with the average score of '+ johnScore);
+
+}else if (mikeScore > johnScore && mikeScore > maryScore) {
+    console.log("Mikes is the winner with the average score of " + mikeScore)
+}else if ( maryScore > johnScore && maryScore > mikeScore) {
+    console.log("It is Mary who is the winner with the average score of " + maryScore)
+}else {
+    console.log('There is a tide!')
+}
