@@ -93,8 +93,8 @@ console.log(x,y);
 // var markHigherBmi = marksMass > johnsMass;
 
 // console.log('is Mark\'s BMI higher than John\'s? ' + markHigherBmi);
-
-// var firstName = 'Bacchus';
+/*
+var firstName = 'Bacchus';
 var civilStatus = 'single';
 
 if (civilStatus === 'married') {
@@ -146,6 +146,8 @@ if (age < 13) {
 
    // the ternary operator
 
+   /*
+
    var firstName = 'john';
    var age = 22;
 
@@ -192,6 +194,10 @@ falsey values: are undefined, null, o, '', nan all these will be converted to fa
 
 truthy values: not falsy values */
 
+/*
+
+*******************************************
+
 var height;
 height = 0;
 
@@ -221,3 +227,117 @@ if (johnScore > mikeScore && johnScore > maryScore) {
 }else {
     console.log('There is a tide!')
 }
+
+function calculateAge(birthYear) {
+    return 2019 - birthYear;
+}
+
+var bacchusAge = calculateAge(1977);
+var maryAge = calculateAge(2016);
+var annieAge = calculateAge(2000);
+var candyAge = calculateAge(1999);
+console.log(bacchusAge, maryAge, annieAge, candyAge);
+
+function yearsUntilRetirement(year, firstName) {
+    //calling a function within a function
+    var age = calculateAge(year);
+    var retirement = 65 - age;
+    
+    if (retirement > 0) {
+           //fucntions do not have to return anything back but they can
+    console.log(firstName + ' retires in ' + retirement + ' years.')
+    }else {
+        console.log(firstName + ' is already retired');
+    }
+ 
+}
+
+yearsUntilRetirement (1990, "John");
+yearsUntilRetirement (1930, "Mike");
+
+*******************************************
+*/
+
+
+//arrays
+
+var john = ['John', 'Smith', 1990, 'designer', false];
+
+john.push('blue');
+john.unshift('Mr');
+console.log(john);
+
+john.pop();
+john.shift();
+console.log(john);
+
+console.log(john.indexOf(23));
+
+var isDesigner = john.indexOf('designer') === -1 ? "John is not a fucking designer darnt it" : 'John is a designer'
+console.log(isDesigner);
+
+function tip (billAmount) {
+    var percentage;
+    if (billAmount <50){
+        percentage = .2;  
+    } else if (billAmount >= 50 && billAmount < 200){
+        percentage = .15;
+    } else {
+        percentage = .1;
+    }
+    return percentage * billAmount
+}
+
+console.log(tip(50));
+
+var bills =  [124, 48, 268];
+var tips = [tip(bills[0]),
+            tip(bills[1]),
+            tip(bills[2])];
+
+var finaValues = [
+    bills[0] + tips [0],
+    bills[1] + tips [1],
+    bills[2] + tips [2]
+]
+
+console.log(tips, finaValues);
+************************************************
+
+
+// OBJECTS AND PROPERTIES
+
+
+var john = {
+    firstName: 'John',
+    lastName: 'Smith',
+    birthYear: 1990,
+    family: ['Jane', 'Mark', 'Bob', 'Emily'],
+    job: 'teacher',
+    married: false
+};
+
+console.log(john.lastName);
+console.log(john['family']);
+console.log(john.family);
+
+john.job = 'designer';
+
+console.log(john.job)
+
+console.log(john)
+
+var jane = new Object();
+jane.name = 'Jane';
+jane.birthYear = 1969;
+jane['lastNam'] = 'Smith';
+console.log(jane);
+
+var john = {
+    firstName: 'John',
+    lastName: 'Smith',
+    birthYear: 1990,
+    family: ['Jane', 'Mark', 'Bob', 'Emily'],
+    job: 'teacher',
+    married: false
+};
