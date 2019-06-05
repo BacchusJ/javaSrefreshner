@@ -355,12 +355,13 @@ var john = {
 john.calcAge();
 console.log(john);
 
-*/
 
+**************************************
 var mark = {
     fullName: 'Mark Miller',
     height: 1.89,
     weight: 97.1,
+    //adding a function with in an object
     calcMass: function() {
        this.bmi = this.weight / (this.height * this.height);
        return this.bmi;
@@ -382,7 +383,7 @@ var john = {
 }
 
 
-
+//the if statement has both of the functions above
 if (john.calcMass() > mark.calcMass()) {
     console.log (mark.fullName + ' \'s BMI of ' + mark.bmi  + ' is higher than John\'s there for, he wins! ');
 
@@ -392,4 +393,36 @@ if (john.calcMass() > mark.calcMass()) {
 
 else {
     console.log('They are both the same');
+}
+
+var john = ['John', 'Smith', 1990, 'designer', false];
+
+
+//for loops
+for (var i = 0; i < john.length; i++) {
+    console.log(john[i]);
+}
+
+//while loops
+var i = 0;
+while(i < john.length){
+    console.log(john[i]);
+    i++;
+}
+*/
+var john = ['John', 'Smith', 1990, 'designer', false];
+for (var i = 0; i < john.length; i++) {
+    if (typeof john[i] !== "string") continue
+    console.log(john[i]);
+}
+
+for (var i = 0; i < john.length; i++) {
+    if (typeof john[i] !== "string") break;
+    console.log(john[i]);
+}
+
+// looping backwards
+
+for (var i = john.length -1; i >= 0; i --) {
+    console.log(john[i]);
 }
